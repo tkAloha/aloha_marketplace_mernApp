@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const profilesRoutes = require("./src/routes/profiles");
 const authRoutes = require("./src/routes/auth");
 const userRoutes = require("./src/routes/users");
-
+const path =require("path")
 
 const PORT = process.env.PORT;
 
@@ -20,14 +20,17 @@ app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/uploads', express.static('uploads'));
-app.get("/",(req,res)=>{
-  res.json({"msg":"Express app working"})
-})
+
 //routes
 app.use("/profiles", profilesRoutes);
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 
+//serving react application
+app.get('/',(req,res)=>{
+  app.use(express.static(path.resolve(__dirname,'client','build')))
+  res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+})
 
 //connecting to DB
 mongoose

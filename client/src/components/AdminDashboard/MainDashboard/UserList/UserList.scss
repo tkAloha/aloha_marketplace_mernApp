@@ -1,0 +1,132 @@
+@import "../../../../index.scss";
+
+.users-list {
+  margin:3rem 0;
+.parent-table {
+    border-collapse: collapse;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width:100%;
+    
+  }
+.capitalize {
+  text-transform: capitalize;
+}
+
+th,
+td {
+  border-bottom: solid 2px #F5F5F5;
+  text-align: left;
+  padding: 15px;
+
+}
+
+
+
+thead tr {
+  text-transform: uppercase;
+  background-color: #F5F5F5;
+}
+
+.actions {
+  padding:8px 0;
+}
+
+.edit-btn {
+    color:$primary-color;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    font-size:2rem;
+    cursor:pointer;
+    
+}
+
+.delete-btn {
+    color:red;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    font-size:2.3rem;
+    cursor:pointer;
+}
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+.search {
+  position:relative;
+}
+
+.search input {
+  width:280px;
+  border-radius: 25px;
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.search span {
+  position:absolute;
+  background-color: #d3d3d3;
+  border-radius:0 25px 25px 0;
+  top:0px;
+  right:0;
+  width:20%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:18px;
+}
+
+.delete-mode {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color:#fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding:50px;
+  border-radius:8px;
+  font-size:18px;
+  color:#000;
+  font-weight:bold;
+  border:none;
+  z-index:1;
+  p {
+    margin-bottom:30px;
+    span {
+      text-transform: capitalize;
+    }
+  }
+   button.delete{
+    background-color:#d9534f;
+    margin-right:10px;
+    border:none;
+    &:hover {
+      background-color: red;
+    }
+  }
+   button.cancel{
+    background-color: $grey-dark;
+    border:none;
+    &:hover {
+      background-color:$secondary-color;
+    }
+  }
+}
+
+.not-enabled {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #c4c4c4;
+  text-transform: uppercase;
+  
+}
+}

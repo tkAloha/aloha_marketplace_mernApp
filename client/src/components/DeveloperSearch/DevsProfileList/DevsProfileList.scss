@@ -1,0 +1,106 @@
+@import "../../../index.scss";
+
+.profile-header {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px $border-color;
+    border-bottom: solid 1px $border-color;
+    .title {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .filter-section {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        .search {
+            position: relative;
+        }
+
+        .search input {
+            width: 280px;
+            border-radius: 25px;
+            background: #fff;
+            outline: none;
+            border: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .search span {
+            position: absolute;
+            background-color: #d3d3d3;
+            border-radius: 0 25px 25px 0;
+            top: 0px;
+            right: 0;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .sort-icon {
+            font-size:2.5rem;
+            cursor:pointer
+        }
+    }
+    @media (max-width: 768px) {
+        input {
+            width: 180px !important;
+        }
+    }
+}
+
+section.status {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    gap: 20px;
+    border-bottom: solid 1px $border-color;
+    .title {
+        font-family: Oswald, sans-serif;
+        font-size: 66px;
+        font-weight: 100;
+        border-right: solid 1px $border-color;
+        padding-right: 30px;
+    }
+
+    .available {
+        border-right: solid 1px $border-color;
+        padding-right: 30px;
+    }
+    .num {
+        font: normal 40px Oswald;
+    }
+
+    .text {
+        font: normal 16px Montserrat;
+    }
+    //for smaller viewport
+    @media (max-width: 768px) {
+        .title {
+            font-size: 20px;
+        }
+        .num {
+            font-size: 16px;
+        }
+
+        .text {
+            font-size: 12px;
+        }
+    }
+}
+
+section.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px 0;
+    }
+}

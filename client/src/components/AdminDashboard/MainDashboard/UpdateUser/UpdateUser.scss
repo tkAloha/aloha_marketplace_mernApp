@@ -1,0 +1,90 @@
+
+  
+  
+  
+  @import "../../../../index.scss";
+
+  .edit-user {
+    max-width: 600px;
+    margin:20px 0;
+    
+  h2 {
+    color: #000;
+    font-size: 20px;
+    margin-bottom:20px;
+  }
+  .form-row {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  label {
+    color:#000;
+    font-weight:600;
+  }
+  input,select {
+    border-radius: 3px;
+    padding: 10px;
+    border: solid 1px #d3d3d3;
+    outline:none;
+  }
+  
+  input[type="text"] {
+    text-transform: capitalize;
+  }
+  
+  input:focus,select:focus {
+    border:solid 1px $primary-color;
+  }
+  
+   .pass-field {
+    position:relative;
+   }
+
+  .password-icon {
+   position:absolute;
+   top:3.3rem;
+   right:1rem;
+   font-size:1.7rem;
+  }
+  button {
+    color: white;
+    border:none;
+    outline:none;
+    padding:10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+    background:$secondary-color;
+    border: none;
+    color: #fff;
+    transition:all 0.5s ease-in-out ;
+    margin-right:2rem;
+  }
+  
+  button:hover {
+  background-color:#333;
+  }
+  .cancel-btn {
+    background-color:#888888
+  }
+  div.error {
+    padding: 10px;
+    background: $error-bg;
+    border: 1px solid $error;
+    color:$error;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+  }
+  
+  
+  
+  

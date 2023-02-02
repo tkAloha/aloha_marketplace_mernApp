@@ -1,0 +1,55 @@
+@import "../../../index.scss";
+
+
+.sidebar {
+  background-color: #f7f7f7;
+  position: relative;
+  padding: 45px 0 0 0px;
+  
+  .collapsible-icon-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #0091ff;
+    background-color: transparent;
+    font-size: 30px;
+    position: absolute;
+    top: 250px;
+    left: 8px;
+  }
+  
+  /* styles for active link */
+  .active {
+    background-color: #888888;
+  }
+  .inactive {
+    background-color: #f7f7f7;
+  }
+  
+  .active .menu-label,
+  .active .menu-icon {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .inactive .menu-label,
+  .inactive .menu-icon {
+    color:#888;
+    font-weight: 500;
+  }
+  .sideMenu * {
+    font-size: 18px !important;
+    
+  }
+  .icon {
+    /* color:#888888; */
+    font-size: 25px !important;
+  }
+  
+}
+
+
+
+
+
+

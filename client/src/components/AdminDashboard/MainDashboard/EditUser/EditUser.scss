@@ -1,0 +1,88 @@
+
+ @import "../../../../index.scss";
+
+ .edit-row {
+
+ 
+input,select {
+    border-radius: 3px;
+    padding: 7px;
+    border: solid 2px $border-color;
+    outline:none;
+  }
+
+  button {
+    color: white;
+    border:none;
+    outline:none;
+    padding:7px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+    background:$primary-color;
+    border: none;
+    color: #fff;
+    transition:all 0.5s ease-in-out ;
+    margin-right:2rem;
+    transition : all 0.3s ease;
+    &:hover {
+      background-color: #1b9cef;
+    }
+  }
+  
+  .cancel-btn {
+    background-color:#888888;
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  input:focus,select:focus {
+    border:solid 1px $primary-color;
+  }
+  
+ 
+
+  div.error {
+    position: absolute;
+    top:140px;
+    right:50%;
+    padding: 6px 30px;
+    background: $error-bg;
+    border: 1px solid $error;
+    color:$error;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+  .edit-mode {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color:#fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding:50px;
+    border-radius:8px;
+    font-size:18px;
+    color:#000;
+    font-weight:bold;
+    border:none;
+    z-index:1;
+    p {
+      margin-top:10px;
+      margin-bottom:20px;
+      span {
+        text-transform: capitalize;
+      }
+      
+    }
+    .alert {
+      font-size:1.4rem;
+      color:red;
+      margin-top:10px;
+    }
+    
+     
+  }
+}

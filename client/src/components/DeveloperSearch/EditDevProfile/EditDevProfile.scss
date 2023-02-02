@@ -1,0 +1,356 @@
+@import "../../../index.scss";
+
+.edit-profile {
+  padding: 50px;
+  color: $secondary-color;
+  // header
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.8rem;
+      h1 {
+        text-transform: uppercase;
+        font: normal 1.4rem Montserrat;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      p {
+        margin-top: -3px;
+      }
+    }
+
+    .back-btn {
+      font-size: 1.8rem;
+      font-weight: 600;
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+  }
+  .form-error {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    p {
+    padding: 10px 100px;
+    background: $error-bg;
+    border: 1px solid $error;
+    color: $error;
+    border-radius:4px;
+    margin-bottom:20px;
+    display:inline-block;
+    }
+  }
+  section.edit-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    //common in both right and left section
+    h3 {
+      color: $primary-color;
+      font-weight: 400;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: Montserrat, sans-serif;
+      span {
+        font-size:1.3rem;
+        color:$secondary-color;
+        text-transform:none;
+      }
+    }
+
+    .category {
+      margin-bottom: 50px;
+    }
+
+    hr {
+      margin: 1rem 0;
+      height: 1.5px;
+      border: none;
+      background-color: #dddddd;
+    }
+
+    .error {
+      color: red;
+      font-size: 1.3rem;
+      margin-top: 8px;
+      margin-left: 5px;
+    }
+
+    .input-field {
+      margin: 30px 0;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 14px;
+      color: #333;
+      font-family: "Open Sans", sans-serif;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 1.4rem;
+      background-color: $input-bg;
+      background-color: #f5f5f5;
+      border: none;
+      outline: none;
+      border-radius: 3px;
+      color: #333;
+      &::placeholder {
+        color: #acaaaa;
+        
+      }
+    }
+   
+   
+    .image-upload {
+      display: flex;
+      gap: 20px;
+      input {
+        width: 50%;
+        height: 40px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+
+    .add-btn-block {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 2rem;
+    }
+    .add-btn {
+      border-radius: 3px;
+      border: 1px solid $primary-color;
+      padding: 8px 15px;
+      color: $primary-color;
+      background-color: transparent;
+      font-size: 1.4rem;
+    }
+
+    .add-skills-field {
+      margin-bottom: 50px;
+    }
+    //styles for text-editor
+
+    .text-editor-color {
+      background-color: #f5f5f5;
+      border: none;
+      width: 100%;
+      padding: 8px 12px;
+    }
+    .ql-editor {
+      box-sizing: border-box;
+      line-height: 1.42;
+      outline: none;
+      padding: 8px 1px;
+      padding-bottom: 40px;
+      height: auto !important;
+    }
+
+    .ql-toolbar.ql-snow {
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      border: none !important;
+      box-sizing: border-box;
+      padding: 8px 1px;
+    }
+
+    .ql-snow .ql-picker-label {
+      cursor: pointer;
+      display: inline-block;
+      height: 100%;
+      padding-left: 0px;
+      padding-right: 2px;
+      position: relative;
+      width: 100%;
+    }
+    .quill > .ql-container > .ql-editor.ql-blank::before {
+      font-style: normal;
+      margin-left: -12px;
+      font-size: 1.4rem;
+      color: #757575;
+    }
+
+    /* .ql-toolbar.ql-snow { border: none !important;} */
+    .ql-container.ql-snow {
+      border: none !important;
+      color: #333;
+    }
+
+    .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+      position: absolute;
+      margin-top: -5px;
+      right: 0;
+      left: 130%;
+      top: 50%;
+      width: 18px;
+    }
+
+    .ql-toolbar.ql-snow .ql-formats {
+      margin-right: 50px;
+    }
+
+    .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
+    .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+      content: "Heading1";
+    }
+
+    .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
+    .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+      content: "Heading2";
+    }
+
+    .ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
+    .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+      content: "Heading3";
+    }
+
+    .ql-snow.ql-toolbar button,
+    .ql-snow .ql-toolbar button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      height: 24px;
+      padding: 5px 5px 0px 3px;
+      width: 28px;
+    }
+  }
+
+  div.skills {
+    .input-field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 50px;
+      gap: 30px;
+    }
+    label,
+    input {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 1.4rem;
+      color: $input-bg;
+      font-weight: normal;
+      background-color: #f5f5f5;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .delete-icon {
+      color: $secondary-color;
+      font-size: 2rem;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      margin-left: -54px;
+    }
+    .error-row {
+      text-align: right;
+      margin: -10px 80px 7px 0;
+    }
+    .general-error {
+      margin-bottom: 5px;
+    }
+    .value-error {
+      p {
+        text-align: right;
+        margin-right: 80px;
+        margin-bottom:10px;
+      }
+    }
+  }
+  div.capabilities {
+    .input-field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 50px;
+      gap: 30px;
+    }
+    label,
+    input {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 1.4rem;
+      color: $input-bg;
+      font-weight: normal;
+      background-color: #f5f5f5;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    .error-row {
+      text-align: right;
+      margin: -10px 80px 7px 0;
+    }
+  }
+
+  .availabilitydropdown {
+    width: 40%;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f5f5f5;
+    border-style: none;
+    border-width: 1px;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .project {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .delete-icon {
+        color: $secondary-color;
+        font-size: 2rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+      }
+    }
+  }
+  .btns-wrapper {
+    display: flex;
+    gap: 10px;
+    button {
+      color: white;
+      border: none;
+      outline: none;
+      padding: 7px 30px;
+      border-radius: 3px;
+      cursor: pointer;
+      align-self: center;
+      text-align: center;
+      background: $primary-color;
+      border: none;
+      color: #fff;
+      transition: all 0.5s ease-in-out;
+      margin-right: 2rem;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #1b9cef;
+      }
+    }
+    .cancel-btn {
+      background-color: #888888;
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}

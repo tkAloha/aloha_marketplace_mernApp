@@ -1,0 +1,42 @@
+@import "../../../../index.scss";
+
+.leftSection {
+    .intro {
+        display:grid;
+        grid-template-columns:1fr 3fr;
+        gap:4rem;
+        .role {
+            margin-bottom:15px;
+        }
+    }
+    .profile-img {
+        width:14rem;
+        height:14rem;
+        border-radius:50%;
+        object-fit: cover;
+    }
+
+    .capabilities-img {
+        margin-top:25px;
+    }
+    
+    .projects {
+        .project {
+            margin-bottom:50px;
+            .title {
+                color:$secondary-color;
+                font: bold 1.6rem Montserrat;
+                text-transform: capitalize;
+                margin:1.5rem 0;
+            }
+            .desc {
+                font: normal  1.4rem "Open Sans";
+                h1,h2,h3,h4,h5,h6 {
+                    color:$secondary-color;
+                    font-weight:600;
+                }
+            }
+            
+        }
+    }
+}

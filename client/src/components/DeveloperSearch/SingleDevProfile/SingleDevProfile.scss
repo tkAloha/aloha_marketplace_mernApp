@@ -1,0 +1,147 @@
+@import "../../../index.scss";
+
+.dev-profile {
+    padding: 50px;
+    color: $secondary-color;
+    .downloading-spinner {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        gap: 20px;
+        font-size: 1.6rem;
+    }
+    .delete-mode {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background-color:#fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding:50px;
+        border-radius:8px;
+        font-size:18px;
+        color:#000;
+        font-weight:bold;
+        border:none;
+        z-index:1;
+        p {
+          margin-bottom:30px;
+          span {
+            text-transform: capitalize;
+          }
+        }
+         button.delete{
+          background-color:#d9534f;
+          margin-right:10px;
+          border:none;
+          &:hover {
+            background-color: red;
+          }
+        }
+         button.cancel{
+          background-color: $grey-dark;
+          border:none;
+          &:hover {
+            background-color:$secondary-color;
+          }
+        }
+      }
+    //common in both right and left section
+    h3 {
+        color: $primary-color;
+        font: normal 1.6rem Montserrat;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .category {
+        margin-bottom: 3rem;
+    }
+
+    hr {
+        margin: 1rem 0;
+        height: 1.5px;
+        border: none;
+        background-color: #dddddd;
+    }
+
+    //for skills and additional skills tag
+    .tags {
+        display: flex;
+        gap: 1rem;
+    }
+    .tag {
+        color: $primary-color;
+        padding: 3px 15px;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        font: normal 1.4rem "Open Sans";
+        margin-top: 15px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    // header
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 70px;
+
+        .title {
+            text-transform: uppercase;
+            font: normal 1.4rem Montserrat;
+        }
+        .actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            .download-icon {
+                cursor: pointer;
+                color: $secondary-color;
+                font-size: 2.6rem;
+            }
+            .edit-icon {
+                cursor: pointer;
+                color: $primary-color;
+                font-size: 2.2rem;
+            }
+            .delete-icon {
+                cursor: pointer;
+                color: $primary-color;
+                color: red;
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    .pdf-section {
+        margin-bottom: 70px;
+        .pdf-title {
+            color: $primary-color;
+            font-size: 2.4rem;
+            text-transform: capitalize;
+        }
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        p {
+            color: $secondary-color;
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+        hr {
+            background-color: #ddd;
+        }
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+    }
+}

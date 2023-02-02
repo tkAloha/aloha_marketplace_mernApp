@@ -1,0 +1,113 @@
+@import "../../../../index.scss";
+
+.rightSection {
+    div.available {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        .availability {
+            font: bold 2.4rem Montserrat;
+            margin-right: 8px;
+        }
+        .availability-date {
+            font: normal 1.4rem "Open Sans";
+            font-weight: 600;
+            margin-top: 4px;
+        }
+    }
+    div.proficiency {
+        font: bold 3.4rem Montserrat;
+        
+    }
+
+    div.experience {
+        font: normal 1.4rem "Open Sans";
+        font-weight: 600;
+        span {
+            font-size:2.4rem;
+            font-weight:bold;
+        }
+    }
+
+    div.additional-skills {
+        margin: 10px 0 20px 0;
+        h3 {
+            font: normal bold 1.4rem "Open Sans";
+            text-transform: capitalize;
+            color: $secondary-color;
+        }
+    }
+
+    section.video {
+        margin-bottom: 15px;
+        .modal,
+        .overlay {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+        }
+        .overlay {
+            background: rgba(49, 49, 49, 0.8);
+            border-radius: 10px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .modal-content {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 1.4;
+            background: #f1f1f1;
+            padding: 14px 80px;
+            border-radius: 10px;
+            //   max-width: 600px;
+            min-width: 300px;
+        }
+        h3 {
+            margin-bottom: 18px;
+        }
+        .layout {
+            display: flex;
+            gap: 30px;
+            .video-image {
+                border-radius: 10px;
+                width: 300px;
+                height: auto;
+            }
+            div.content {
+                .title {
+                    color: $secondary-color;
+                    font: bold 1.6rem Montserrat;
+                    text-transform: capitalize;
+                    margin: 1.5rem 0;
+                }
+                .desc {
+                    font: normal 1.4rem "Open Sans";
+                }
+            }
+        }
+        .video-image {
+            cursor: pointer;
+        }
+        .video {
+            width: 604px;
+            height: 304px;
+            border-radius: 10px;
+        }
+    }
+}

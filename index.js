@@ -20,7 +20,9 @@ app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/uploads', express.static('uploads'));
-
+app.get("/",(req,res)=>{
+  res.json({"msg":"Express app working"})
+})
 //routes
 app.use("/profiles", profilesRoutes);
 app.use("/auth", authRoutes);

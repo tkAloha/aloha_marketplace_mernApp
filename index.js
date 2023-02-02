@@ -11,7 +11,8 @@ const userRoutes = require("./src/routes/users");
 const PORT = process.env.PORT;
 
 //express app
-const app = express();
+// const app = express();
+const app = (module.exports = express())
 app.use(cors());
 app.options('*', cors());
 

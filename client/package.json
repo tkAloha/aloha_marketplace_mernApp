@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:5000",
+  "proxy": "https://aloha-marketplace-mern-8nsn08usk-tkaloha.vercel.app",
   "name": "client",
   "version": "0.1.0",
   "private": true,

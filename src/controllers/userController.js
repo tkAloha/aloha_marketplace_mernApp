@@ -1,6 +1,6 @@
 
 const mongoose = require("mongoose");
-const User = require("../models/UserModel");
+const User = require("../models/userModel");
 const Profile = require("../models/profileModel");
 const bcrypt = require("bcrypt");
 const validator = require("validator");

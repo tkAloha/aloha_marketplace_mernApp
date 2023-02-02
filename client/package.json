@@ -1,5 +1,5 @@
 {
-  "proxy": "https://aloha-marketplace-mern-8nsn08usk-tkaloha.vercel.app",
+  "proxy": "https://aloha-marketplace-mern-app.vercel.app",
   "name": "client",
   "version": "0.1.0",
   "private": true,
